@@ -36,7 +36,7 @@ public class FilesController {
     try {
       List<String> fileNames = new ArrayList<>();
 
-      Arrays.asList(files).stream().forEach(file -> {
+      Arrays.asList(files).forEach(file -> {
         storageService.save(file);
         fileNames.add(file.getOriginalFilename());
       });
